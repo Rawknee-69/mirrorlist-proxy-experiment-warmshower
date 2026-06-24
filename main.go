@@ -129,7 +129,7 @@ func (p *Proxy) fetchFromUpstream(upstreamPath string) ([]byte, error) {
 	}
 
 	req.Header.Set("Accept", "application/json, text/plain")
-	req.Header.Set("User-Agent", "CachyOSMirrorlistProxy/1.0")
+	req.Header.Set("User-Agent", "WarmShowerMirrorlistProxy/1.0")
 
 	resp, err := p.httpClient.Do(req)
 	if err != nil {
@@ -157,7 +157,7 @@ func main() {
 	pathMappings := map[string]string{
 		"/status":             "/mirrors/status/json/",
 		"/tier1":              "/mirrors/status/tier/1/json/",
-		"/cachyos-mirrorlist": GITHUB_MIRRORLIST,
+		"/warmshower-mirrorlist": GITHUB_MIRRORLIST,
 	}
 
 	appPort := getEnv("PORT", "8080")
