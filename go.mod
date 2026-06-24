@@ -1,3 +1,3 @@
-module github.com/YOUR_ORG/mirrorlist-proxy-experiment
+module github.com/Rawknee-69/mirrorlist-proxy-experiment-warmshower
 
 go 1.25.0
